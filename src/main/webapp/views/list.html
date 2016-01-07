@@ -1,0 +1,20 @@
+<h2>Hacker<a  class="btn btn-primary pull-right" href="#/create"><i
+        class="icon-plus-sign icon-white"></i> Kill Ajay</a></h2>
+
+<table class="table table-hover">
+<tr>
+    <tr>
+        <th>#</th>
+       <th>Name</th>
+    </tr>
+
+
+</tr>
+    <tr ng-repeat="todo in todos">
+        <td>{{$index+1}}</td>
+        <td>
+            {{todo.name}}
+        </td>
+    </tr>
+</table>
+
