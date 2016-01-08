@@ -23,8 +23,20 @@ app.controller('ListCtrl', function ($scope, $http, $filter) {
 
     var orderBy = $filter('orderBy');
 
-    $http.get('http://localhost:7090/case-service/getAll').success(function (data) {
+   /* $http.get('http://localhost:7090/todo/getSample').success(function (data) {
         $scope.todos = data;
+
+        $scope.order = function (predicate, reverse) {
+            $scope.todos = orderBy($scope.todos, predicate, reverse);
+        };
+
+    }).error(function (data, status) {
+        console.log('Error ' + data)
+    })
+*/
+    $http.get('http://localhost:7090/todo/user').success(function (data) {
+        $scope.todos = data;
+        console.log(data)
 
         $scope.order = function (predicate, reverse) {
             $scope.todos = orderBy($scope.todos, predicate, reverse);
